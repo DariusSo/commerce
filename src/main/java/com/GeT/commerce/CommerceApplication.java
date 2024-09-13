@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 @SpringBootApplication
 public class CommerceApplication {
 
@@ -14,16 +16,5 @@ public class CommerceApplication {
 		SpringApplication.run(CommerceApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(ProductRepository productRepository){
-		return runner -> {
-			addProduct(productRepository);
-		};
-	}
 
-	private void addProduct(ProductRepository productRepository) {
-		Product product = new Product();
-		product.setTitle("Produktas");
-		productRepository.save(product);
-	}
 }

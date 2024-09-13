@@ -1,8 +1,11 @@
 package com.GeT.commerce.repositories;
 
 import com.GeT.commerce.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository {
+import java.util.List;
 
-    void save(Product product);
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+
+    Product findById(int id);
 }
