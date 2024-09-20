@@ -1,14 +1,14 @@
 package com.GeT.commerce.exceptions;
 
-public class ProductErrorResponse {
+public class ErrorResponse {
     private int status;
     private String message;
     private long timeStamp;
 
-    public ProductErrorResponse() {
+    public ErrorResponse() {
     }
 
-    public ProductErrorResponse(int status, long timeStamp, String message) {
+    public ErrorResponse(int status, long timeStamp, String message) {
         this.status = status;
         this.timeStamp = timeStamp;
         this.message = message;

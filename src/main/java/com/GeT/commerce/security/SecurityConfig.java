@@ -16,6 +16,10 @@ public class SecurityConfig {
                 configurer
                         .requestMatchers(HttpMethod.GET, "/products").anonymous()
                         .requestMatchers(HttpMethod.GET, "/products/**").anonymous()
+                        .requestMatchers(HttpMethod.GET, "/products/category/**").anonymous()
+                        .requestMatchers(HttpMethod.GET, "/categories/get").anonymous()
+
+
         );
         http.httpBasic(Customizer.withDefaults());
         http.csrf((csrf -> csrf.disable()));
